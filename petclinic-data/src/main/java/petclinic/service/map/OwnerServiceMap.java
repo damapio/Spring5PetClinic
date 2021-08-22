@@ -2,9 +2,12 @@ package petclinic.service.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import petclinic.model.OwnerPet;
 import petclinic.service.OwnerService;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<OwnerPet, Long>
 	implements OwnerService {
 
