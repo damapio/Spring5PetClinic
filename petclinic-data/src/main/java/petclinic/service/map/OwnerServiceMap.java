@@ -22,8 +22,8 @@ public class OwnerServiceMap extends AbstractMapService<OwnerPet, Long>
 	}
 
 	@Override
-	public OwnerPet save(Long id, OwnerPet owner) {
-		return super.save(id, owner);
+	public OwnerPet save(OwnerPet owner) {
+		return super.save(owner);
 	}
 
 	@Override
@@ -34,11 +34,6 @@ public class OwnerServiceMap extends AbstractMapService<OwnerPet, Long>
 	@Override
 	public void delete(OwnerPet owner) {
 		super.delete(owner);
-	}
-
-	@Override
-	public OwnerPet save(OwnerPet owner) {
-		return super.save(owner.getId(), owner);
 	}
 
 	@Override
