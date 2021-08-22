@@ -6,5 +6,27 @@
 </head>
 <body>
 	<h1 th:text="'Vets list'">Index!</h1>
+	
+	<table id="vets" class="table table-striped">
+        <thead>
+	        <tr>
+	            <th style="width: 50px;">Id</th>
+	            <th style="width: 150px;">Name</th>
+	            <th style="width: 150px">Surname</th>
+	<!--             <th>Pets</th> -->
+	        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="vet : ${vets}">
+          	<td style="width: 50px;" th:text="${vet.id}">id</td>
+          	<td style="width: 150px;" th:text="${vet.firstName}">name</td>
+          	<td style="width: 150px;" th:text="${vet.lastName}">surname</td>
+<!--               <td> -->
+<!--                   <a th:href="@{/owners/__${owner.id}__}" th:text="${owner.firstName + ' ' + owner.lastName}"/></a> -->
+<!--               </td> -->
+<!--               <td><span th:each="pet : ${owner.pets}" th:text="${pet.name} "/></td> -->
+          </tr>
+        </tbody>
+    </table>
 </body>
 </html>
