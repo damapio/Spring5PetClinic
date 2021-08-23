@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
 <head>
 	<meta charset="UTF-8">
 	<title>Pet Clinic Owners index</title>
 </head>
 <body>
 <!--/*@thymesVar id="owner" type="com.damapio.petclinic.model.OwnerPet"*/-->
-	<h1 th:text="'Owners list'">Index!</h1>
+	<h2 th:text="'Owners list'">Index!</h2>
 	
 	
 	<table id="vets" class="table table-striped">
