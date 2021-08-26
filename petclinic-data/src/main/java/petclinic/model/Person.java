@@ -1,7 +1,12 @@
 package petclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class Person extends BaseEntity {
 
+	@Column(name = "first_name") //aunque Hibernate defaults a esto mismo
 	private String firstName;
 	private String lastName;
 	
