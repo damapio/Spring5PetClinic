@@ -37,7 +37,7 @@ public class OwnerServiceMap extends AbstractMapService<OwnerPet, Long>
 	@Override
 	public OwnerPet save(OwnerPet owner) {
 		if (null != owner) {
-			if (null == owner.getPets()) {
+			if (null != owner.getPets()) {
 				owner.getPets().forEach(pet -> {
 					if (null != pet.getType()) {
 						if (null == pet.getType().getId()) {
