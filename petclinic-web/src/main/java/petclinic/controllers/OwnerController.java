@@ -21,10 +21,16 @@ public class OwnerController {
 
 
 
-	@RequestMapping({"", "/", "find", "/index", "/index.html"})
+	@RequestMapping({"", "/", "/index", "/index.html"})
 	public String index(Model model) {
 		model.addAttribute("owners", ownerService.findAll());
 		
 		return "owners/index";
+	}
+	
+	@RequestMapping("/find")
+	public String findOwners(Model model) {
+		
+		return "404";
 	}
 }
