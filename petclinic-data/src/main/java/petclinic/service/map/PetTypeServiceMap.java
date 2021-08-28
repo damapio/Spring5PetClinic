@@ -5,26 +5,26 @@ import java.util.Set;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import petclinic.model.Pet;
-import petclinic.service.PetService;
+import petclinic.model.PetType;
+import petclinic.service.PetTypeService;
 
 @Service
 @Profile({"default", "map"})
-public class PetTypeServiceMap extends AbstractMapService<Pet, Long>
-	implements PetService {
+public class PetTypeServiceMap extends AbstractMapService<PetType, Long>
+	implements PetTypeService {
 
 	@Override
-	public Set<Pet> findAll() {
+	public Set<PetType> findAll() {
 		return super.findAll();
 	}
 
 	@Override
-	public Pet findById(Long id) {
+	public PetType findById(Long id) {
 		return super.findById(id);
 	}
 
 	@Override
-	public Pet save(Pet pet) {
+	public PetType save(PetType pet) {
 		return super.save(pet);
 	}
 
@@ -34,7 +34,7 @@ public class PetTypeServiceMap extends AbstractMapService<Pet, Long>
 	}
 
 	@Override
-	public void delete(Pet pet) {
+	public void delete(PetType pet) {
 		super.delete(pet);
 	}
 	
